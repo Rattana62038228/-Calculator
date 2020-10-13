@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="calcu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+      input {
+        height: 100px;
+        width: 100px;
+        font-size: 50px;
+      }
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table class="center">
+      <tr>
+        <td colspan="2">
+          <input style="width: 200px" id="showValue" type="text" value=" " readonly />
+        </td>
+        <td>
+          <input
+            style="font-size: 40px"
+            type="button"
+            id="btnReset"
+            onclick="clr()"
+            value="reset"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" id="btnSeven" onclick="cal(7)" value="7" />
+        </td>
+        <td>
+          <input type="button" id="btnEight" onclick="cal(8)" value="8" />
+        </td>
+        <td><input type="button" id="btnNine" onclick="cal(9)" value="9" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" id="btnFour" onclick="cal(4)" value="4" /></td>
+        <td><input type="button" id="btnFive" onclick="cal(5)" value="5" /></td>
+        <td><input type="button" id="btnSix" onclick="cal(6)" value="6" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" id="btnOne" onclick="cal(1)" value="1" /></td>
+        <td><input type="button" id="btnTwo" onclick="cal(2)" value="2" /></td>
+        <td>
+          <input type="button" id="btnThree" onclick="cal(3)" value="3" />
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" id="btnZero" onclick="cal(0)" value="0" /></td>
+        <td>
+          <input type="button" id="btnPlus" onclick="cal('+')" value="+" />
+        </td>
+        <td>
+          <input type="button" id="btnMinus" onclick="cal('-')" value="-" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" id="btnDivides" onclick="cal('/')" value="/" />
+        </td>
+        <td>
+          <input type="button" id="btnMulti" onclick="cal('*')" value="*" />
+        </td>
+        <td>
+          <input
+            style="color: white; background-color: red"
+            id="btnEqual"
+            type="button"
+            onclick="solve()"
+            value="="
+          />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
